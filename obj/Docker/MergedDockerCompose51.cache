@@ -1,0 +1,54 @@
+services:
+  apigateway:
+    build:
+      context: D:\BizCover\BizCover
+      dockerfile: src/ApiGateway/APIGateway/Dockerfile
+    container_name: apigateway
+    depends_on:
+      calculate.api:
+        condition: service_started
+      cars.api:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: apigateway
+    ports:
+    - published: 7000
+      target: 80
+    volumes:
+    - C:\Users\leslie\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\leslie\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  calculate.api:
+    build:
+      context: D:\BizCover\BizCover
+      dockerfile: src/Calculate/Calculate.API/Dockerfile
+    container_name: calculateapi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: calculateapi
+    ports:
+    - published: 8001
+      target: 80
+    - published: 8002
+      target: 443
+    volumes:
+    - C:\Users\leslie\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\leslie\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  cars.api:
+    build:
+      context: D:\BizCover\BizCover
+      dockerfile: src/Cars/Cars.API/Dockerfile
+    container_name: carsapi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: carsapi
+    ports:
+    - published: 8003
+      target: 80
+    - published: 8004
+      target: 443
+    volumes:
+    - C:\Users\leslie\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\leslie\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

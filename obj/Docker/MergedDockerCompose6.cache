@@ -1,0 +1,44 @@
+services:
+  apigateway:
+    build:
+      context: D:\BizCover\BizCover
+      dockerfile: src/ApiGateway/APIGateway/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: apigateway
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\leslie\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\leslie\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  calculate.api:
+    build:
+      context: D:\BizCover\BizCover
+      dockerfile: src/Calculate/Calculate.API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: calculateapi
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\leslie\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\leslie\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  cars.api:
+    build:
+      context: D:\BizCover\BizCover
+      dockerfile: src/Cars/Cars.API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: carsapi
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\leslie\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\leslie\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

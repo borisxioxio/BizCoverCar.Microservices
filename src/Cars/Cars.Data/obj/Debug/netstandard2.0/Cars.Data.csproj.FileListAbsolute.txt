@@ -1,0 +1,11 @@
+D:\BizCover\BizCover\src\Cars\Cars.Data\bin\Debug\netstandard2.0\Cars.Data.deps.json
+D:\BizCover\BizCover\src\Cars\Cars.Data\bin\Debug\netstandard2.0\Cars.Data.dll
+D:\BizCover\BizCover\src\Cars\Cars.Data\bin\Debug\netstandard2.0\Cars.Data.pdb
+D:\BizCover\BizCover\src\Cars\Cars.Data\bin\Debug\netstandard2.0\BizCover.Repository.Cars.dll
+D:\BizCover\BizCover\src\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.csprojAssemblyReference.cache
+D:\BizCover\BizCover\src\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.AssemblyInfoInputs.cache
+D:\BizCover\BizCover\src\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.AssemblyInfo.cs
+D:\BizCover\BizCover\src\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.csproj.CoreCompileInputs.cache
+D:\BizCover\BizCover\src\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.csproj.CopyComplete
+D:\BizCover\BizCover\src\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.dll
+D:\BizCover\BizCover\src\Cars\Cars.Data\obj\Debug\netstandard2.0\Cars.Data.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "mWOG1viRI/CrLaSbpAR7EsqxZizn2EpSwaRteuhBxsu1T2o81cmTeOzC8FRcbWYIRZmZfZBqQGM9geNCQpe+gA==",
+  "success": true,
+  "projectFilePath": "D:\\BizCover\\BizCover\\src\\Cars\\Cars.Data\\Cars.Data.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\leslie\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\leslie\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

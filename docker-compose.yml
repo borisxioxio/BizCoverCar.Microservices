@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  calculate.api:
+    image: ${DOCKER_REGISTRY-}calculateapi
+    build:
+      context: .
+      dockerfile: src/Calculate/Calculate.API/Dockerfile
+
+  cars.api:
+    image: ${DOCKER_REGISTRY-}carsapi
+    build:
+      context: .
+      dockerfile: src/Cars/Cars.API/Dockerfile
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/APIGateway/Dockerfile
+
